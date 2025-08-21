@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>K-Means Interactive Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>K‑Means Clustering — Interactive Demo</h1>
+
+    <section class="controls">
+      <label for="kSelect">Choose k:</label>
+      <select id="kSelect">
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+      </select>
+
+      <button id="initCentroids">Place centroids</button>
+      <button id="assign">Assign points</button>
+      <button id="update">Move centroids</button>
+      <button id="restart">Restart (new data)</button>
+
+      <div id="info">Points: <span id="pointCount">150</span> · Iteration: <span id="iter">0</span></div>
+    </section>
+
+    <canvas id="canvas" width="800" height="600"></canvas>
+
+    <footer>
+      Tip: Pick k, click "Place centroids", then repeatedly click "Assign points" and "Move centroids" until clusters stabilize.
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
